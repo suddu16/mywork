@@ -1,0 +1,12 @@
+.inline{
+    display:inline;
+}
+.fieldset{
+    border:2px solid;
+}
+.legend{
+    width:auto;
+}
+.unseen{
+    display:none;
+}

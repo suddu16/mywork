@@ -1,0 +1,47 @@
+.body{
+    background-color: lightgray;
+}
+.inline{
+    display:inline;
+}
+.tab-border{
+    border : 1px solid lightgray;
+    border-top:0px;
+    background-color:white;
+}
+.margintop{
+    margin-top : 10px;
+}
+.active.design{
+    background-color:white;
+    border-radius: 0;
+    border-bottom:1px solid white;
+}
+.design{
+    background-color:#aaa;
+    border-color:gray;
+}
+.design.col-sm-6{
+    padding-right:0px;
+    padding-left:0px;
+}
+.nav-tabs.col-sm-6{
+    padding-right:0px;
+}
+.tab-pane.active{
+    margin-top:50px;
+    margin-bottom:30px;
+}
+.nav.nav-tabs{
+    margin-top:20px;
+}
+.glyphicon-book{
+    margin-top:50px;
+}
+.input-group{
+    margin-bottom:15px;
+}
+.btn{
+    letter-spacing: 4px;
+    text-transform:uppercase;
+}

@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+        <script type ="text/javascript" src="validate.js"></script>
+        <link rel="stylesheet" type="text/css" href="form.css"/>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <script src="jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <h1><center>Feedback Form</center></h1>
+        <form role = "form" class="form-horizontal" action="form" method="GET" onsubmit="return checkAll()">
+            <div class="form-group">
+            <fieldset class="fieldset col-sm-offset-2 col-sm-8">
+                <legend class="legend">A.Personal Information</legend>
+                
+                <div class="form-group has-feedback" id="nameDiv">
+                    <label class="col-sm-2 control-label" for="name">Name</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" onblur="isName()" name="name" type = "text" id="name"/>
+                         <span class="form-control-feedback" id="nameSpan"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group has-feedback" id="dobDiv">
+                    <label class="col-sm-2 control-label" for="dob">Date Of Birth</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" onblur="isDOB()" type = "date" id="dob" name="dob"/>
+                        <span class="form-control-feedback" id="dobSpan"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Interest</label> 
+                    <div class="col-sm-3">
+                        <div class="checkbox-inline">
+                            <label>
+                                <input type = "checkbox" name="interest" value="Surfing the web">Surfing the web
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="checkbox-inline">
+                            <label>
+                                <input type = "checkbox" name="interest" value="Reading Books">Reading Books
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group has-feedback" id="emailDiv">
+                    <label class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" onblur="isEmail();" type = "text" name="email" id="email"/>
+                        <span class="form-control-feedback" id="emailSpan"></span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Country</label>
+                    <div class="col-sm-9">
+                        <select name='country' class="form-control ">
+                            <option>India</option>
+                            <option>Australia</option>
+                            <option>South Africa</option>
+                            <option>Pakistan</option>
+                            <option>England</option>
+                            <option>New Zealand</option>
+                            <option>Sri Lanka</option>
+                            <option>Bangladesh</option>
+                            <option>Zimbabwe</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            </div>
+            
+            <div class="form-group">
+            <fieldset class="fieldset col-sm-offset-2 col-sm-8">
+                <legend class="legend">B.Rate Our Website</legend>
+                <label class="col-sm-2 control-label">Rating</label>
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        <div class="radio-inline">
+                            <label>
+                            <input type="radio" name="rating" value="Great" checked="checked">Great
+                            </label>
+                        </div>
+                    </div>
+                <div class="col-sm-2">    
+                    <div class="radio-inline">
+                        <label>
+                            <input type="radio" name="rating" value="Good">Good
+                        </label>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="radio-inline">
+                        <label>
+                            <input type="radio" name="rating" value="Fair">Fair
+                        </label>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="radio-inline">
+                        <label>
+                            <input type="radio" name="rating" value="Poor">Poor
+                        </label>
+                    </div>
+                    </div>
+                </div>
+            </fieldset>
+            </div>
+            
+            <div class="form-group">
+                <fieldset class="fieldset col-sm-offset-2 col-sm-8">
+                    <legend class="legend">C.Give us Your comment To further improve our website</legend>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Comment</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" name="comment"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            
+            <div class="form-group">
+                <div class="col-sm-offset-5 col-sm-1">
+                    <button class="btn btn-primary" type = "submit" name="submit" id="submitForm">Submit</button>
+                </div>
+                <div class="col-sm-1">
+                    <button class="btn btn-primary" type = "reset" name="reset" id="reset" onclick="resetFields()">Reset</button>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
